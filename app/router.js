@@ -5,5 +5,5 @@
  */
 module.exports = app => {
   const { router, controller } = app;
-  
+  router.get("/addUser", controller.user.addUser);
 };

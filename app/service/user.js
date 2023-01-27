@@ -3,8 +3,8 @@
 const Sv = require("egg").Service;
 
 class UserSv extends Sv {
-    async add_user_sv() {
-
+    async addUser() {
+        
     }
 }
 module.exports = UserSv;
