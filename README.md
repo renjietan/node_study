@@ -33,3 +33,36 @@ yarn dev
 ### package.json
 * dev : 开发环境中使用，不用重启服务器，只要刷新。修改内容就会更改。
 * start：生产环境中使用，也就是开发完成，正式运营之后。以服务的方式运行。修改后要停止和重启后才会发生改变。
+
+### 关闭跨域(config.default.js)
+···
+  config.security = {
+    csrf: {
+      enable: false,
+    }
+  }
+···
+
+### mysql相关
+- plugin.js
+```
+exports.mysql = {
+  enable:true,
+  package:'egg-mysql'
+}
+```
+- config.default.js
+```
+config.mysql = {
+    app:true,     //是否挂载到app下面
+    agent:false,  //是否挂载到代理下面
+    client:{
+      host:'192.168.1.140',      // 数据库地址
+      prot:'3306',           // 端口
+      user:'root',           // 用户名
+      password:'123456',    // 密码
+      database:'test'    // 连接的数据库名称
+    }
+  }
+```
+

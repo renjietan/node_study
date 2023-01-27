@@ -27,6 +27,17 @@ module.exports = appInfo => {
       enable: false,
     }
   }
+  config.mysql = {
+    app:true,     //是否挂载到app下面
+    agent:false,  //是否挂载到代理下面
+    client:{
+      host:'192.168.1.140',      // 数据库地址
+      prot:'3306',           // 端口
+      user:'root',           // 用户名
+      password:'123456',    // 密码
+      database:'test'    // 连接的数据库名称
+    }
+  }
   return {
     ...config,
     ...userConfig,
